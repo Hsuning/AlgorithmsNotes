@@ -1,0 +1,11 @@
+#QuickSort
+- Use: #DaC 
+- Input: an array
+- Output: a sorted array
+- Description:
+	- pick an element from the array. This element is called the pivot. It is better to choose a random element as the pivot. In the average case, the stack size is O(log n).
+	- partitioning - find the elements smaller than the pivot and the elements larger than the pivot
+	- get a sub-array of all the numbers less than the pivot, the pivot, and a sub-array of all the numbers greater than the pivot
+- Quicksort has a smaller constant than merge sort. So if they’re both O(n log n) time, quicksort is faster. And quicksort hits the average case way more often than the worst case.
+- Best case = average case scenario $O(n * log n)$: the height of the call stack is O(log n), and each level takes O(n) time. If you always choose a random element in the array as the pivot, quicksort will complete in O(n log n) time on average
+- Worst case cenario  $O(n^2)$: O(n) levels
