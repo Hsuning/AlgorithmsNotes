@@ -1,7 +1,12 @@
-#CallStack #Recursion 
-- when you call a function from another function, the calling function is paused in a partially completed state.
-- All the values of the variables for that function are still stored in memory.
-- A stack has two operations: push and pop.
+#Stack #Recursion 
+- LIFO data structure: Last In, First Out
+- Item that are added to the list last will be poped first.
+	- push: add item
+	- pop: get item
+
+#CallStack
+- When you call a function from another function, the calling function is paused in a partially completed state. All the values of the variables for that function are still stored in memory.
+
 ```
 def greet(name):   # 1. allocate a box of memory for this function
 	print “hello, “ + name + “!”
@@ -12,6 +17,5 @@ def greet(name):   # 1. allocate a box of memory for this function
 		  # same as 2
 	# nothing to do, pop off greet function
 ```
-- you don’t have to keep track of a pile of boxes yourself—the stack does it for you
-- but there’s a cost: saving all that info can take up a lot of memory
-- The call stack can get very large, which takes up a lot of memory.
+- Advantage: You don’t have to keep track of a pile of boxes yourself—the stack does it for you
+- Disadvantage: saving all that info can take up a lot of memory. The call stack can get very large, which takes up a lot of memory.

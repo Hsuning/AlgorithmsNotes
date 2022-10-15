@@ -1,5 +1,5 @@
 #Recursion #RecursiveMethod 
-- Use: #CallStack 
+- Use: #Stack 
 - Recursion is when a function calls itself
 - Description: a recursive function has two parts
 	- base case: when the function doesn't call itself again. So function won't end up in an infinite loop = > RecursionError: maximum recursion depth exceeded

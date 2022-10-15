@@ -10,9 +10,46 @@
 		- Is there a path from node A to node B ? (Is there a mango seller in your network?)
 		- What is the shortest path from node A to node B? (Who is the closest mango seller?)
 	3. Search in a queue : first-degree then second then third
+- Complexitiy: O(V+E) (V for number of vertices, E for number of edges).
+```
+from collections import deque
+
+# Use dictionary to create graph
+graph = {}
+graph['you'] = ['alice', 'bob', 'claire'] 
+graph['bob'] = ['anuj', 'peggy'] 
+graph['alice'] = ['peggy'] 
+graph['claire'] = ['thom', 'jonny'] 
+graph['anuj'] = []
+graph['peggy'] = []
+graph['thom'] = []
+graph['jonny'] = []
+
+# Define what you want to search?
+# Ex name ends with letter m
+def name_ends_with_m(name):
+    if name.endswith("m"):
+        return True
+    return False
 
 
-#Queue
-- Similar to stack. #SequentialAccess
-- Enqueue
-- Dequeue
+def break_first_search(graph, who):
+    seach_queue = deque(graph[who]) #create a queue and add all the first-class elements to search
+    
+    # Store name that you have already searched before to prevent duplicate search
+    searched = set()
+    
+    # While there is at least an element in queue
+    while seach_queue:
+        # Dequeue the first in element
+        name = seach_queue.popleft()
+        if name not in searched: # if not searched before
+            if name_ends_with_m(name): # Check whether the name ens with "m"
+                return True, name 
+            else:
+                seach_queue += graph[name]
+                searched.add(name)
+    return False, None
+
+break_first_search(graph, "you")
+```
