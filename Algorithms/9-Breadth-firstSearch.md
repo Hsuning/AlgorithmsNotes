@@ -1,9 +1,11 @@
 #Breadth-firstSearch #BFS
 - Use: #Graphs 
-- Shortest-path problem: “What’s the shortest path to go to X?”. Find the shortest distance between two things
+- Check if there is a path from A to B. 
+- Shortest-path problem: “What’s the shortest path to go to X?”. Find the shortest distance between two things. Compared to fastest-path problem.
 	- Write a checkers AI that calculates the fewest moves to victory
 	- Write a spell checker (fewest edits from your misspelling to a real word—for example, READED -> READER is one edit)
 	- Find the doctor closest to you in your network
+- It’s not necessarily the fastest path. It’s the shortest path, because it has the least number of segments. #WeightedGraphs #DijkstraAlgorithm 
 - Algorithms: 
 	1.  Model the problem as a #Graphs .
 	2. Solve the problem using breadth-first search: can we get there in 1, 2, 3, 4, ... steps
@@ -34,7 +36,7 @@ def name_ends_with_m(name):
 
 
 def break_first_search(graph, who):
-    seach_queue = deque(graph[who]) #create a queue and add all the first-class elements to search
+    seach_queue = deque(graph[who]) #create a queue and add all the first-degree elements to search
     
     # Store name that you have already searched before to prevent duplicate search
     searched = set()
