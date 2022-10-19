@@ -1,5 +1,5 @@
 # Algorithm
-#DijkstraAlgorithm
+#DijkstraAlgorithm #GreedyAlgorithm 
 - Dijkstra's algorithm works even if there is a cycle, as long as it is a positive weight cycle.
 - “What’s the shortest time to X?” for #WeightedGraphs 
 - Find the path with the smallest total weight
@@ -12,6 +12,7 @@
       A-->|1| Finish;
       B-->|5| Finish;
 ```
+- Negative-Weight Edges: Dijkstra’s algorithm assumed that because you were processing the poster node, there was no cheapest way to get to that node. So you can’t use negative-weight edges with Dijkstra’s algorithm. Use #BallmanFordAlgorithm 
 - Algorithm:
 	- Build a table with weight and parent of every node. Put infinity for node that we don't know yet
 		- START->A: 6, START->B: 2, ?->Finish: $\infty$
@@ -30,7 +31,7 @@ A  | Finish | 6
 	- We can see that the shortest path to Finish costs 6
 	- How do you figure out the path? To start with, look at the parent for 
 	  Finish -> A -> B -> Start
-- Negative-Weight Edges: Dijkstra’s algorithm assumed that because you were processing the poster node, there was no cheapest way to get to that node. So you can’t use negative-weight edges with Dijkstra’s algorithm. Use #BallmanFordAlgorithm 
+
 
 # Data Structure Used
 The graph

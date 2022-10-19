@@ -1,17 +1,15 @@
 #Breadth-firstSearch #BFS
-- Use: #Graphs 
-- Check if there is a path from A to B. 
-- Shortest-path problem: “What’s the shortest path to go to X?”. Find the shortest distance between two things. Compared to fastest-path problem.
+- Use: #Graphs, unweighted
+- #GreedyAlgorithm 
+- Check if there is a path from A to B and find the shortest path from A to B
 	- Write a checkers AI that calculates the fewest moves to victory
 	- Write a spell checker (fewest edits from your misspelling to a real word—for example, READED -> READER is one edit)
 	- Find the doctor closest to you in your network
-- It’s not necessarily the fastest path. It’s the shortest path, because it has the least number of segments. #WeightedGraphs #DijkstraAlgorithm 
+- It’s not necessarily the fastest path. It’s the shortest path, because it has the least number of segments. For cheapest path, see  #WeightedGraphs #DijkstraAlgorithm 
 - Algorithms: 
 	1.  Model the problem as a #Graphs .
-	2. Solve the problem using breadth-first search: can we get there in 1, 2, 3, 4, ... steps
-		- Is there a path from node A to node B ? (Is there a mango seller in your network?)
-		- What is the shortest path from node A to node B? (Who is the closest mango seller?)
-	3. Search in a queue : first-degree then second then third
+	2. Solve the problem with can we get there in 1, 2, 3, 4, ... steps
+	3. Search in a queue : start with first-degree nodes then second then third
 - Complexitiy: O(V+E) (V for number of vertices, E for number of edges).
 ```
 from collections import deque
