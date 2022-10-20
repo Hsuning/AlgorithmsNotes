@@ -7,7 +7,7 @@
 	- Pick the item that fullfills maximum the codition (like station that covers the most states)  than haven't been covered yet.
 	- It's OK to pick one that convers some states that have been covered already
 	- Repeat until all the states are covered
-
+- #DijkstraAlgorithm  is a greedy algorithms
 #SetCoveringProblem
 ```
 # A set of states we want to cover

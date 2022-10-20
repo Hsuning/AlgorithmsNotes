@@ -4,7 +4,7 @@
 - Description: a recursive function has two parts
 	- base case: when the function doesn't call itself again. So function won't end up in an infinite loop = > RecursionError: maximum recursion depth exceeded
 	- recursive case: when the function calls itself
-- Loops may achieve a performance gain for your program. Recursion may achieve a performance gain for your programmer
+- Loops may achieve a performance gain for your program. 
 ```
 def countdown(i):
     if i <= 0: # Base case
