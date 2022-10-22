@@ -21,8 +21,8 @@
 	- when the problem can be broken into discrete subproblems, and they don’t depend on each other
 
 #longestcommonsubsequence 
-The number of letters in a sequence that the two words have in common
-	- Find similarities in DNA strands
+- The number of letters in a sequence that the two words have in common
+	- find similarities in DNA strands
 	- git diff
-	- Levenshtein distance measures how similar two strings are
+	- levenshtein distance measures how similar two strings are
 	- word wrap: figure out where to wrap so that the line length stays consistent
